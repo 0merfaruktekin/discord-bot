@@ -14,12 +14,12 @@ ydl_opts = {
         'preferredquality': '192',
     }],
 }
-weather_api="1d1df4adf1362f3fb122f785152c0341"
-reddit = praw.Reddit(client_id ='tI4N-N8esw-UsQ',
-                     client_secret ="3i7pndvXwIaz_Fn8crNVWWqz7ZI",
-                     username = "La-La-Lahmacun",
-                     password = "axj352697",
-                     user_agent = "pythonpraw", )
+weather_api="...."
+reddit = praw.Reddit(client_id ='....',
+                     client_secret ="...",
+                     username = "..."
+                     password = "...",
+                     user_agent = "...", )
 
 client = commands.Bot(command_prefix = '.')
 @client.event
@@ -256,4 +256,4 @@ async def play(ctx,url):
     with youtube_dl.YoutubeDL({}) as ydl:
         video=ydl.download([url])
     await channel.play(video)"""
-client.run('NzY1NTcyNzc1MTYyMTUwOTM1.X4WxNQ.3n7HbmVMmvQNcG9DE9GZs7lV4j0')
+client.run('....')
