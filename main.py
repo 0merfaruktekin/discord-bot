@@ -78,21 +78,6 @@ async def meme(ctx):
     em = discord.Embed(title = name)
     em.set_image(url = url)
     await ctx.send(embed = em)
-@client.command()
-async def ayıplı(ctx):
-    subreddit = reddit.subreddit("porngifs")
-    all_subs = []
-
-    top = subreddit.hot(limit=200)
-    for submission in top:
-        all_subs.append(submission)
-
-    random_sub = random.choice(all_subs)
-
-    url = random_sub.url
-
-
-    await ctx.send(url)
 
 @client.command(pass_context=True)
 async def clear(ctx, amount=100):
@@ -249,11 +234,4 @@ async def havadurumu(ctx):
     value_ant = str(value_ant)
     panel.add_field(name="Antalya", value=value_ant+"°C"+ant_icon,inline="False")
     await ctx.send(embed=panel)
-"""@client.command(pass_context=True)
-async def play(ctx,url):
-    channel = ctx.author.voice.channel
-    await channel.connect()
-    with youtube_dl.YoutubeDL({}) as ydl:
-        video=ydl.download([url])
-    await channel.play(video)"""
 client.run('....')
